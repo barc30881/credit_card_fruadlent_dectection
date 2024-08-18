@@ -14,4 +14,5 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "gunicorn", "core.wsgi", "-b", "0.0.0.0:8000"]
+ENTRYPOINT ["gunicorn", "your_project_name.wsgi:application", "--bind", "0.0.0.0:8000"]
+
